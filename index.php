@@ -33,19 +33,26 @@
 <p> Hi! I am Kanako. I'm from Saitama, Japan. I came seattle in last September, so this is my seconed quater. It's my first time to using PHP language. On offdays, I usually watching movies, if you have any recommendation, pealse let me know;)</p>
 
 
+<h2> Assignment </h2>
+<img src="images/screenshot1.png" alt="screenshot1">
+<img src="images/screenshot2.png" alt="screenshot2">
+
 </main>
 
 <aside>
 <h2>Weekly Class Exercises</h2>
 <h3>Week 2</h3>
 <ol>
-    <li><a href="var.php">var.php</a></li>
+    <li><a href="weeks/week2/var.php">var.php</a></li>
     <li><a href="">var.php</a></li>
     <li><a href="">var.php</a></li>
     <li><a href="">var.php</a></li>
     <li><a href="">var.php</a></li>
 </ol>
 </aside>
+
+
+
 
 
 </body>

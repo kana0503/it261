@@ -29,9 +29,23 @@
 </nav>
 <main>
 <h2>About Kanako</h2>
-<p> A Paragraph about yourself, i.e.</p>
-<img src="images/prfile.jpg" alt="Kanako">
+<img class="right" src="images/profile.JPG" alt="Kanako">
+<p> Hi! I am Kanako. I'm from Saitama, Japan. I came seattle in last September, so this is my seconed quater. It's my first time to using PHP language. On offdays, I usually watching movies, if you have any recommendation, pealse let me know;)</p>
+
+
 </main>
+
+<aside>
+<h2>Weekly Class Exercises</h2>
+<h3>Week 2</h3>
+<ol>
+    <li><a href="var.php">var.php</a></li>
+    <li><a href="">var.php</a></li>
+    <li><a href="">var.php</a></li>
+    <li><a href="">var.php</a></li>
+    <li><a href="">var.php</a></li>
+</ol>
+</aside>
 
 
 </body>

@@ -35,7 +35,7 @@
 
 <h2> Assignment </h2>
 <img src="images/screenshot1.png" alt="screenshot1">
-<img src="images/screenshot2.png" alt="screenshot2">
+<img src="images/screenshot2-1.png" alt="screenshot2">
 
 </main>
 

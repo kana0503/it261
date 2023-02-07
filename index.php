@@ -21,7 +21,7 @@
     <ul>
         <li><a href="">Switch</a></li>
         <li><a href="adder.php">Troubleshoot</a></li>
-        <li><a href="">Calculator</a></li>
+        <li><a href="weeks/week5/calculator.php">Calculator</a></li>
         <li><a href="">Email</a></li>
         <li><a href="">Database</a></li>
         <li><a href="">Garelly</a></li>
@@ -75,6 +75,7 @@
     <li><a href="weeks/week5/currency1.php">currency1.php</a></li>
     <li><a href="weeks/week5/currency2.php">currency2.php</a></li>
     <li><a href="weeks/week5/currency3.php">currency3.php</a></li>
+    <li><a href="weeks/week5/currency-extra.php">currency-extra.php</a></li>
     <li><a href="weeks/week5/null.php">null.php</a></li>
 </ol>
 </aside>

@@ -7,6 +7,10 @@
 
 }
 
+h1 {
+    text-align: center;
+}
+
 body {
     background: #ddd;
 
@@ -50,6 +54,11 @@ form ul{
     list-style-type: none;
 }
 
+.reset {
+    text-align: center;
+    font-style: italic;
+}
+
 .box {
     width: 400px;
     padding: 10px;
@@ -60,4 +69,38 @@ form ul{
     color: red;
     font-style: italic;
     text-align: center;
+}
+
+.xBody {
+    background-color: beige;
+}
+
+.xForm {
+    border: 2px solid red;
+    padding: 10px;
+}
+
+.xbox {
+    width: 400px;
+    padding: 10px;
+    margin: 0 auto;
+    border: 2px solid green;
+    margin-bottom: 20px;
+}
+
+.xbox2 {
+    width: 550px;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: skyblue;
+
+}
+.xbox3 {
+    width: 550px;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: gray;
+
 }

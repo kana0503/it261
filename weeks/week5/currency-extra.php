@@ -87,19 +87,22 @@ if($_SERVER['REQUEST_METHOD'] =='POST') {
         <p>You now have <b>$'.number_format($dollars, 2).' American dollars</b> and we will be emailing you at <b>'.$email.'</b> with your information, as well as depositiong your funds at <b>'.$bank.' bank</b> !</p>
         </div>        
         ';
+
+        if($dollars < 100){
+            echo '<div class="xbox2">
+            <h2>I am NOT happy, becuase I have $'.$dollars.' American dollars</h2><br>
+            <iframe width="425" height="315" src="https://www.youtube.com/embed/kbIbp2fUVzA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>'; 
+        }else {
+            echo '<div class="xbox3">
+            <h2>I am REALLY happy, becuase I have $'.$dollars.' American dollars</h2><br>
+            <iframe width="425" height="315" src="https://www.youtube.com/embed/Km71Rr9K-Bw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>';
         }
+        }
+        
     }
-    if($dollars < 100){
-        echo '<div class="xbox2">
-        <h2>I am NOT happy, becuase I have $'.$dollars.' American dollars</h2><br>
-        <iframe width="425" height="315" src="https://www.youtube.com/embed/kbIbp2fUVzA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>'; 
-    }else {
-        echo '<div class="xbox3">
-        <h2>I am REALLY happy, becuase I have $'.$dollars.' American dollars</h2><br>
-        <iframe width="425" height="315" src="https://www.youtube.com/embed/Km71Rr9K-Bw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>';
-    }
+    
 }
 
 

@@ -32,9 +32,9 @@
 <!--- time for our radio button that has an additional attribute of value --->
     <label>Price of gas</label>
     <ul>
-    <li><input type="radio" name="gas" value="3.00" <?php if(isset($_POST['gas']) && $_POST['gas'] == 3.00) echo 'checked="cheked"';?>> $3.00</li>
-    <li><input type="radio" name="gas" value="3.50" <?php if(isset($_POST['currency']) && $_POST['gas'] == 3.50) echo 'checked="cheked"';?>> $3.50</li>
-    <li><input type="radio" name="gas" value="4.00" <?php if(isset($_POST['currency']) && $_POST['gas'] == 4.00) echo 'checked="cheked"';?>> $4.00</li>
+    <li><input type="radio" name="gas" value="3.00" <?php if(isset($_POST['gas']) && $_POST['gas'] == 3.00) echo 'checked="checked"';?>> $3.00</li>
+    <li><input type="radio" name="gas" value="3.50" <?php if(isset($_POST['currency']) && $_POST['gas'] == 3.50) echo 'checked="checked"';?>> $3.50</li>
+    <li><input type="radio" name="gas" value="4.00" <?php if(isset($_POST['currency']) && $_POST['gas'] == 4.00) echo 'checked="checked"';?>> $4.00</li>
     </ul>
     <label>Fuel efficiency</label>
     <select name="fuel">

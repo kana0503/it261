@@ -1,5 +1,7 @@
 <?php
+include('config.php');
 include('./includes/header.php');
+
 
 if(isset($_GET['today'])){
     $today = $_GET['today'];

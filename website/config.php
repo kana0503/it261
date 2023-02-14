@@ -150,7 +150,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     }
 
     
-    if(isset($_POST['frist_name'],
+    if(isset($_POST['first_name'],
     $_POST['last_name'],
     $_POST['email'],
     $_POST['gender'],

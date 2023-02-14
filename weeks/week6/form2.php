@@ -91,7 +91,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     }
 
     
-    if(isset($_POST['frist_name'],
+    if(isset($_POST['first_name'],
     $_POST['last_name'],
     $_POST['email'],
     $_POST['gender'],
@@ -100,7 +100,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $_POST['comments'],
     $_POST['privacy'])){
         $to = 'Kanako.Wakata@seattlecolleges.edu';
-        $subject = 'Test Email on '.date('m/d/y, h i A');
+        $subject = 'Test Email on ' .date('m/d/y, h i A');
         $body = '
         First Name: '.$first_name.' '.PHP_EOL.'
         Last Name: '.$last_name.' '.PHP_EOL.'
@@ -118,7 +118,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
         if(!empty($first_name && $last_name && $email && $gender && $phone && $regions && $wines && $comments)){
             mail($to, $subject, $body, $headers);
-            header("Location:thx.php");
+            header('Location:thx.php');
         }
 
     

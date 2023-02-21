@@ -65,7 +65,7 @@ $last_name = '';
 $email = '';
 $gender = '';
 $phone = '';
-$wines = '';
+$seasons = '';
 $privacy = '';
 $regions = '';
 $comments = '';
@@ -75,7 +75,7 @@ $last_name_err = '';
 $email_err = '';
 $gender_err = '';
 $phone_err = '';
-$wines_err = '';
+$seasons_err = '';
 $privacy_err = '';
 $regions_err = '';
 $comments_err = '';
@@ -83,10 +83,10 @@ $comments_err = '';
 
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    if(empty($_POST['wines'])){
-        $wines_err = 'What, no wines?';
+    if(empty($_POST['seasons'])){
+        $seasons_err = 'What, no seasons?';
     }else{
-        $wines = $_POST['wines'];
+        $seasons = $_POST['seasons'];
     }
 
     if(empty($_POST['first_name'])){
@@ -113,11 +113,22 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $gender = $_POST['gender'];
     }
 
-    if(empty($_POST['phone'])){
-        $phone_err = 'Please fill out your phone number';
-    }else{
+    // if(empty($_POST['phone'])){
+    //     $phone_err = 'Please fill out your phone number';
+    // }else{
+    //     $phone = $_POST['phone'];
+    // }
+
+    if(empty($_POST['phone'])) { // if empty, type in your number
+        $phone_err = 'Your phone number please!';
+        } elseif(array_key_exists('phone', $_POST)){
+        if(!preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['phone']))
+        { // if you are not typing the requested format of xxx-xxx-xxxx, display Invalid format
+        $phone_err = 'Invalid format!';
+        } else{
         $phone = $_POST['phone'];
-    }
+        } // end else
+        } // end main if
 
     if(empty($_POST['comments'])){
         $comments_err = 'Please share your thoughts with us';
@@ -137,14 +148,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $regions = $_POST['regions'];
     }
 
-    //wines function
+    //seasons function
 
-    function my_wines($wines){
+    function my_seasons($seasons){
         $my_return = '';
-        if(!empty($_POST['wines'])){
-            $my_return = implode(', ', $_POST['wines']);
+        if(!empty($_POST['seasons'])){
+            $my_return = implode(', ', $_POST['seasons']);
         }else{
-            $wines_err = 'Please fill our your wines!';
+            $seasons_err = 'Please fill our your seasons!';
         }
         return $my_return;
     }
@@ -155,10 +166,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $_POST['email'],
     $_POST['gender'],
     $_POST['phone'],
-    $_POST['wines'],
+    $_POST['seasons'],
     $_POST['comments'],
-    $_POST['privacy'])){
-        $to = 'Kanako.Wakata@seattlecolleges.edu';
+    $_POST['privacy']) && preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/', $_POST['phone'])){
+        $to = 'szemeo@mystudentswa.com';
+        //$to = 'Kanako.Wakata@seattlecolleges.edu';
         $subject = 'Test Email on '.date('m/d/y, h i A');
         $body = '
         First Name: '.$first_name.' '.PHP_EOL.'
@@ -166,7 +178,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         Email: '.$email.' '.PHP_EOL.'
         Gender: '.$gender.' '.PHP_EOL.'
         Phone: '.$phone.' '.PHP_EOL.'
-        Wines: '.my_wines($wines).' '.PHP_EOL.'
+        seasons: '.my_seasons($seasons).' '.PHP_EOL.'
         Regions: '.$regions.' '.PHP_EOL.'
         Comments: '.$comments.' '.PHP_EOL.'
         ';
@@ -175,7 +187,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             'From' => 'noreply@mystudentswa.com'
         );
 
-        if(!empty($first_name && $last_name && $email && $gender && $phone && $regions && $wines && $comments)){
+        if(!empty($first_name && $last_name && $email && $gender && $phone && $regions && $seasons && $comments)){
             mail($to, $subject, $body, $headers);
             header("Location:thx.php");
         }

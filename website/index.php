@@ -7,7 +7,24 @@ include('./includes/header.php');
 <dev id="wrapper">
 
 <div id="hero">
-<img src = "images/twelve.jpg" alt="Twelve is greater than 3">
+<?php
+
+$photo[0] = 'photo1';
+$photo[1] = 'photo2';
+$photo[2] = 'photo3';
+$photo[3] = 'photo4';
+$photo[4] = 'photo5';
+
+function random_images($photo){
+    $my_return = '';
+    $i = rand(0,4);
+    $selected_image = ''.$photo[$i].'.jpg';
+    $my_return = '<img src="./images/'.$selected_image.'" alt="'.$photo[$i].'" >';
+    return $my_return;
+}
+
+echo random_images($photo);
+?>
 </div>
 <!--- end hero ---> 
 

@@ -1,10 +1,10 @@
 <?php
 include('server.php');
 //eventurally, we will place our header include here!!!!
-// inlucde('./includes/header.php');
+include('./includes/header.php');
 ?>
-
-<h1>Register Today!</h1>
+<div id="wrapper">
+<h1 class="center">Register Today!</h1>
 
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])  ;?>" method="post">
 <filedset>
@@ -31,5 +31,11 @@ include('server.php');
 
 <button type="button" onclick="window.location.href='<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>'">Reset</button>
 
+
+<?php include('errors.php'); ?>
 </filedset>
 </form>
+
+<p class="center">already have an account? <a href="login.php">Please login!</a></p>
+</div>
+<?php include('./includes/footer.php');

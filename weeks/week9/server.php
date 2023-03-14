@@ -4,6 +4,7 @@
 
 session_start();
 include('config.php');
+
 // this is where eventually you will have the header include
 // inlucde('./includes/header.php');
 
@@ -72,11 +73,11 @@ if(count($errors)==0){
     // Now is time to insert the information into our table!!!!
 
 
-    $query = "INSERT INTO users (first_name, last_name, email, username, password) VALUES('$first_name','$last_name', '$email', '$username, '$password')";
+    $query = "INSERT INTO users (first_name, last_name, email, username, password) VALUES('$first_name','$last_name', '$email', '$username', '$password')";
 
     mysqli_query($iConn, $query);
     $_SESSION['username'] = $username;
-    $_SESSIon['success'] = $success;
+    $_SESSION['success'] = $success;
 
     // if we are successful, the we will be directed to our login page!!!
     header('Location:login.php');

@@ -1,12 +1,12 @@
 <?php 
 // our login page
 include('server.php');
-//include('./includes/header.php');
+include('./includes/header.php');
 
 
 ?>
-
-<h1>Login page!</h1>
+<div id="wrapper">
+<h1 class="center">Login page!</h1>
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])  ;?>" method="post">
 <fieldset>
     <label>Username</label>
@@ -15,6 +15,16 @@ include('server.php');
     <label>Password</label>
     <input type="password" name="password">
 
+
+    <button type="submit" class="btn" name="login_user">Login</button>
     <button type="button" onclick="window.location.href='<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>'">Reset</button>
+
+    <?php include('errors.php'); ?>
+
 </fieldset>
 </form>
+
+<p class="center">Haven't Registered? Please visit our <a href="register.php">Registration Page!</a></p>
+
+</div>
+<?php include('./includes/footer.php');

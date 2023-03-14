@@ -87,7 +87,7 @@ if(count($errors)==0){
 } // end if isset reg_usr'
 
 // Now, we must communicate with the login page - we will ask the same question!!!!
-if(isset($_POST['login_usr'])){
+if(isset($_POST['login_user'])){
     $username = mysqli_real_escape_string($iConn, $_POST['username']);
     $password = mysqli_real_escape_string($iConn, $_POST['password']);
     
@@ -102,7 +102,7 @@ if(isset($_POST['login_usr'])){
     if(count($errors) == 0){
         $password = md5($password);
 
-        $query = "SELECT * FROM users WHERE usernmae='$username' AND password='$password' ";
+        $query = "SELECT * FROM users WHERE username='$username' AND password='$password' ";
         //below you have a new variable that is results NOT result
         $results = mysqli_query($iConn, $query);
 
